@@ -25,7 +25,7 @@ function App() {
       <div className="flex justify-evenly flex-wrap gap-2">
         {musicData.length > 0 ? (
           musicData.map((music) => (
-            <div key={music.id} className="w-[300px] border text-center border-black" style={{padding:"10px"}}>
+            <div key={music.id} className="w-[300px] border text-center border-black" style={{padding:"10px", borderRadius:"10px"}}>
               <h2>{music.name}</h2>
               <img src={music.image} alt={music.name} className='w-[100%]' />
               <audio controls style={{transform:"scale(0.9", display: "block",margin:"auto", width:"100%"}}>
