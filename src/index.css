@@ -1,5 +1,176 @@
-*{
-  padding: 0;
+/* Global Styles */
+* {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+ 
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: space-evenly;
+
+  
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* Music Player */
+.music-player {
+  width: 400px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.player-header h2 {
+  font-size: 1.5rem;
+}
+
+#current-track {
+  font-size: 1.1rem;
+  color: #777;
+}
+
+#album-cover img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+audio {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.player-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+
+/* Playlist */
+.playlist {
+  width: 400px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.playlist h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+#track-list {
+  list-style-type: none;
+}
+
+.track {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.track:hover {
+  background-color: #f0f0f0;
+}
+
+.track:last-child {
+  border-bottom: none;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Responsive Design */
+
+/* Tablet (screen width <= 768px) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center;
+  }
+
+  .music-player, .playlist {
+    width: 80%;
+  }
+
+  .player-controls {
+    gap: 10px;
+  }
+
+  button {
+    font-size: 1.2rem;
+    padding: 8px 12px;
+  }
+
+
+}
+
+/* Mobile (screen width <= 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .music-player, .playlist {
+    width: 90%;
+  }
+
+
+
+  button {
+    font-size: 1rem;
+    padding: 6px 10px;
+  }
+
+  .track {
+    font-size: 1rem;
+    padding: 8px;
+  }
 }
