@@ -37,14 +37,14 @@ function App() {
       <div className="flex justify-evenly flex-wrap gap-2">
         {musicData.length > 0 ? (
           musicData.map((music, index) => (
-            <div key={music.id} className="w-[300px] border text-center border-black bg-[#1f1e36]" style={{ padding: "10px", borderRadius: "10px" }}>
+            <div key={music.id} className="w-[300px] border text-center border-black bg-[#1f1e36] p-2.5 rounded-2xl">
 
-              <img src={music.image} alt={music.name} className="w-[200px]" style={{ margin: "auto", display: "block" }} />
+              <img src={music.image} alt={music.name} className="w-[200px] m-auto d-block" />
               <h2 className='text-white text-left'>{music.name}</h2>
               <audio
                 ref={(el) => audioRefs.current[index] = el}
                 controls
-                style={{ transform: "scale(1.0)", display: "block", margin: "auto", width: "100%" }}
+                className='m-auto w-[100%] d-block scale-100'
                 onEnded={() => handleEnd(index)}
               >
                 <source src={music.music} type="audio/mpeg" />
@@ -55,6 +55,9 @@ function App() {
           <p>Loading music data...</p>
         )}
       </div>
+      <footer className='text-center text-white mt-4'>
+        <p>© 2025 My Playlist. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
