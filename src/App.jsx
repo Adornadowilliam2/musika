@@ -17,7 +17,6 @@ function App() {
   };
 
   const handleEnd = (index) => {
-
     if (index < musicData.length - 1) {
       const nextAudio = audioRefs.current[index + 1];
       nextAudio.play();
@@ -31,30 +30,46 @@ function App() {
   return (
     <div className="App">
       <ToastContainer />
-      <h1 className="bg-black p-2 text-center text-yellow-500 mb-9 text-[24px]">
-        My Playlist
-      </h1>
-      <div className="flex justify-evenly flex-wrap gap-2">
+      {/* Navbar */}
+      <nav className="navbar">
+        <div className="navbar-container">
+          <a href="#" className="navbar-logo">MusicSite</a>
+          <ul className="navbar-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Artists</a></li>
+            <li><a href="#">Albums</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+  
+
+      {/* Music Cards Container */}
+      <div className="music-container">
         {musicData.length > 0 ? (
           musicData.map((music, index) => (
-            <div key={music.id} className="w-[300px] border text-center border-black bg-[#1f1e36] p-2.5 rounded-2xl">
-
-              <img src={music.image} alt={music.name} className="w-[200px] m-auto d-block" />
-              <h2 className='text-white text-left'>{music.name}</h2>
-              <audio
-                ref={(el) => audioRefs.current[index] = el}
-                controls
-                className='m-auto w-[100%] d-block scale-100'
-                onEnded={() => handleEnd(index)}
-              >
-                <source src={music.music} type="audio/mpeg" />
-              </audio>
+            <div key={music.id} className="music-card">
+              <img src={music.image} alt={music.name} className="music-image" />
+              <div className="music-info">
+                <h2 className="music-title">{music.name}</h2>
+                <audio
+                  ref={(el) => audioRefs.current[index] = el}
+                  controls
+                  className="audio-player"
+                  onEnded={() => handleEnd(index)}
+                >
+                  <source src={music.music} type="audio/mpeg" />
+                </audio>
+              </div>
             </div>
           ))
         ) : (
           <p>Loading music data...</p>
         )}
       </div>
+
+      {/* Footer */}
       <footer className='text-center text-white mt-4'>
         <p>© 2025 My Playlist. All rights reserved.</p>
       </footer>
