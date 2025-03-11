@@ -47,6 +47,17 @@ body {
   gap: 20px;
 }
 
+.dropdown {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+ 
+  
+}
 .navbar-links li {
   display: inline-block;
 }

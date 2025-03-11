@@ -40,6 +40,7 @@ function App() {
             <li><a href="#">Albums</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
+     
         </div>
       </nav>
 
