@@ -40,11 +40,11 @@ function App() {
             <li><a href="#">Albums</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
-     
+
         </div>
       </nav>
 
-  
+
 
       {/* Music Cards Container */}
       <div className="music-container">
@@ -66,12 +66,16 @@ function App() {
             </div>
           ))
         ) : (
-          <p>Loading music data...</p>
+          <div className='w-full h-full flex justify-center items-center'>
+            <img src="" alt="logo" />
+            <p>Loading music data...</p>
+          </div>
+
         )}
       </div>
 
       {/* Footer */}
-      <footer className='text-center text-white mt-4'>
+      <footer className='text-center text-white mt-4 fixed bottom-0 left-0 right-0'>
         <p>© 2025 My Playlist. All rights reserved.</p>
       </footer>
     </div>
