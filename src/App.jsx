@@ -66,8 +66,8 @@ function App() {
             </div>
           ))
         ) : (
-          <div className='w-full h-full flex justify-center items-center'>
-            <img src="" alt="logo" />
+          <div className='w-full h-full flex justify-center items-center flex-col'>
+            <img src="./src/assets/speaker-xxl.png" alt="logo" className='bg-white' />
             <p>Loading music data...</p>
           </div>
 
