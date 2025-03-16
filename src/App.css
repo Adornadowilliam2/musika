@@ -1,0 +1,49 @@
+.speaker-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Speaker Icon */
+  .speaker {
+    position: relative;
+    width: 60px;
+    height: 80px;
+    background-color: #333;
+    border-radius: 8px;
+    outline: 20px solid #fff;
+  }
+  
+  /* Speaker Body */
+  .speaker-body {
+    width: 50px;
+    height: 60px;
+    background-color: #fff;
+    margin: 10px auto;
+    border-radius: 4px;
+  }
+  
+  /* Sound Waves */
+  .speaker-sound {
+    position: absolute;
+    top: 10px;
+    right: -15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .speaker-sound::before,
+  .speaker-sound::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    margin: 5px 0;
+  }
+  
+  .speaker-sound::after {
+    width: 30px;
+    height: 30px;
+  }
