@@ -9,8 +9,9 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-image: url('https://www.w3schools.com/w3images/forest.jpg'); /* Background image */
-  background-size: cover;
+  /* background-image: url('https://www.w3schools.com/w3images/forest.jpg');  */
+  background-image: url("assets/pattern.png");
+  background-size: contain;
   background-position: center;
   color: #fff;
   height: 100vh;
