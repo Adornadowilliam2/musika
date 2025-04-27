@@ -11,7 +11,7 @@ export default function Home() {
 
     const getData = async () => {
         try {
-            const response = await fetch("https://musica-api-eta.vercel.app/api/user");
+            const response = await fetch("https://musicaapi.vercel.app/api/user");
             const data = await response.json();
             setMusicData(data);
         } catch (error) {
